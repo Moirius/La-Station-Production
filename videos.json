@@ -1,0 +1,969 @@
+[
+    {
+        "title": "Pepper Beef - Live au 4bis",
+        "url": "https://youtu.be/jvjYJ496oIk?si=HT3sPVCwmW_j_bok",
+        "format": "horizontal",
+        "type": "live",
+        "miniatureRoot": "miniatures/Site/pepper_beef/Pepper_Beef_Live_au_4bis",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_5.webp", "1_6.webp", "1_7.webp"]
+    },
+    {
+        "title": "Jeanne Bonjour - À mes amours (flashmob Release Party Rennes)",
+        "url": "https://youtu.be/msXiVbt9PUs?si=gYuw1sjLPBmIkHUQ",
+        "format": "horizontal",
+        "type": "live",
+        "miniatureRoot": "miniatures/Site/jeanne_bonjour/Jeanne_Bonjour_A_mes_amours",
+        "miniatures": ["1_1.webp", "1_3.webp", "1_4.webp", "1_5.webp", "1_7.webp", "1_8.webp", "1_9.webp", "1_11.webp", "1_10.webp"]
+    },
+    {
+        "title": "Big Pony Highway - Keep On Doin' It",
+        "url": "https://youtu.be/O6pp4MQRSTY?si=DZmobwluONFtXCMg",
+        "format": "horizontal",
+        "type": "clip",
+        "miniatureRoot": "miniatures/Site/big_pony/Big_Pony_Highway_Keep_On_Doin_It",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp"],
+        "credits": {
+            "production": {
+                "label": "Composé et interprété par",
+                "value": "Big Pony Highway"
+            },
+            "team": [
+                {
+                    "role": "Prise son et mixage",
+                    "names": ["Ghislain Le Bloa"]
+                },
+                {
+                    "role": "Réalisé par",
+                    "names": ["Benjamin Montecot", "Marius Biotteau", "Hector Paris"]
+                }
+            ]
+        }
+    
+    },
+    {
+        "title": "Bendiaz KEITH JARRETT LIVE STATION",
+        "url": "https://youtu.be/CgNJrJojSj4?si=0DQqOECPie-TzGny",
+        "format": "vertical",
+        "type": "live session",
+        "miniatureRoot": "miniatures/Site/bendiaz/Bendiaz_KEITH_JARRETT_LIVE_STATION",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Mise en scène",
+                    "names": ["Marius Biotteau"]
+                },
+                {
+                    "role": "Image",
+                    "names": ["Benjamin Montecot"]
+                },
+                {
+                    "role": "Chef Opérateur",
+                    "names": ["Alan Roussel"]
+                },
+                {
+                    "role": "Lumière",
+                    "names": [
+                        "Robin Cheruel",
+                        "Marin Nupied",
+                        "Pierre Henry Caroff Rolland",
+                        "Maud Masse",
+                        "Grégoire Grasset"
+                    ]
+                },
+                {
+                    "role": "Image - Opérateur Stabilisateur",
+                    "names": ["Lucas Le Gall"]
+                },
+                {
+                    "role": "Image - Opérateur Caméra",
+                    "names": ["Roxanne Delcampe"]
+                }
+            ]
+        }
+    },
+    {
+        "title": "La machine - Session Live",
+        "url": "https://youtu.be/wn1S5ClclHo?si=5E22t5jc0wrNBWIB",
+        "format": "horizontal",
+        "type": "live session",
+        "miniatureRoot": "miniatures/Site/lezarus/La_machine_Session_Live",
+        "miniatures": ["1_2.webp", "1_3.webp", "1_1.webp"]
+    },
+    {
+        "title": "DAVID PISTOL Perdre pour mieux gagner LIVE STATION",
+        "url": "https://youtu.be/pXSRIr92MUE?si=iVUXrivvOAknt_jC",
+        "format": "vertical",
+        "type": "live session",
+        "miniatureRoot": "miniatures/Site/david_pistol/DAVID_PISTOL_Perdre_pour_mieux_gagner_LIVE_STATION",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp", "1_6.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Mise en scène",
+                    "names": ["Marius Biotteau"]
+                },
+                {
+                    "role": "Image",
+                    "names": ["Benjamin Montecot"]
+                },
+                {
+                    "role": "Chef Opérateur",
+                    "names": ["Alan Roussel"]
+                },
+                {
+                    "role": "Lumière",
+                    "names": [
+                        "Robin Cheruel",
+                        "Marin Nupied",
+                        "Pierre Henry Caroff Rolland",
+                        "Maud Masse",
+                        "Arthur Le Deant"
+                    ]
+                },
+                {
+                    "role": "Image - Opérateur Stabilisateur",
+                    "names": ["Alexis Chauvel"]
+                },
+                {
+                    "role": "Image - Opérateur Caméra",
+                    "names": ["Roxanne Delcampe"]
+                }
+            ]
+        }
+    },
+    {
+        "title": "Pepper Beef - Frog",
+        "url": "https://youtu.be/alCwLHrT77w?si=sBeNzaLjbA_5HoUH",
+        "format": "horizontal",
+        "type": "clip",
+        "miniatureRoot": "miniatures/Site/pepper_beef/Pepper_Beef_Frog",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp", "1_6.webp", "1_7.webp", "1_8.webp"],
+        "credits": {
+            "production": {
+                "label": "Mixage et Mastering",
+                "value": "L'Atelier"
+            },
+            "team": [
+                {
+                    "role": "Réalisation",
+                    "names": ["Benjamin Montecot"]
+                },
+                {
+                    "role": "Assistant Réalisateur",
+                    "names": ["Marius Biotteau"]
+                },
+                {
+                    "role": "Chef Opérateur",
+                    "names": ["Alan Roussel"]
+                },
+                {
+                    "role": "Prise de vue",
+                    "names": ["Alexis Chauvel", "Roméo Des Cognets"]
+                },
+                {
+                    "role": "Électricien",
+                    "names": [
+                        "Pierre Henry Caroff Rolland",
+                        "Maud Masse",
+                        "Roxanne Delcampe",
+                        "Louise Martin"
+                    ]
+                },
+                {
+                    "role": "Régie",
+                    "names": [
+                        "Theo Samson",
+                        "Patricia Gasnier",
+                        "Manuella Montecot",
+                        "Lili Gasnier"
+                    ]
+                },
+                {
+                    "role": "Maquillage",
+                    "names": ["Maeva Rochefort"]
+                },
+                {
+                    "role": "Photographe",
+                    "names": ["Sarah Blesteau"]
+                }
+            ]
+        }
+    
+    },
+    {
+        "title": "Big Pony Highway - BEHEMOTH",
+        "url": "https://youtu.be/hJ_haatN2qc?si=H-l2vOth5QPizmKi",
+        "format": "horizontal",
+        "type": "clip",
+        "miniatureRoot": "miniatures/Site/big_pony/Big_Pony_Highway_BEHEMOTH",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp", "1_6.webp", "1_7.webp", "1_8.webp", "1_9.webp", "1_10.webp", "1_11.webp", "1_12.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Tournage",
+                    "names": [
+                        
+                         "Benjamin Montecot",
+                          "Marius Biotteau",
+                          "Alan Roussel",
+                         "Maud Masse" ]
+
+                },
+                {
+                    "role": "Post-production",
+                    "names": [
+        
+                        "Benjamin Montecot"
+                       
+                    ]
+                }
+            ]
+        }
+    
+    },
+    {
+        "title": "KEITH JARRETT - BenDiaz Live Band (BLUE Release Party @4Bis, Rennes)",
+        "url": "https://youtu.be/TPVbMzWDm6A?si=lPMu5SkeFp2LP8S3",
+        "format": "horizontal",
+        "type": "live",
+        "miniatureRoot": "miniatures/Site/bendiaz/KEITH_JARRETT_BenDiaz_Live_Band",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Tournage",
+                    "names": [
+                        
+                         "Benjamin Montecot",
+                        "Roxanne Delcampe" ]
+
+                },
+                {
+                    "role": "Post-production",
+                    "names": [
+        
+                        "Benjamin Montecot"
+                       
+                    ]
+                }
+            ]
+        }
+    },
+
+    {
+        "title": "After Movie - Les Remparts font du Bruit #5 - Soir 1",
+        "url": "https://youtu.be/2d1YMbcyOaI?si=jx6ssCVaOrFizIYR",
+        "format": "horizontal",
+        "type": "After Movie",
+        "miniatureRoot": "miniatures/Site/Les_Remparts_font_du_Bruit/After_Movie_Les_Remparts_font_du_Bruit_5_Soir_1",
+        "miniatures": ["1_7.webp", "1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Tournage",
+                    "names": [
+                        
+                         "Benjamin Montecot"]
+                        
+
+                },
+                {
+                    "role": "Post-production",
+                    "names": [
+        
+                        "Benjamin Montecot"]
+                }
+            ]
+        }
+    },
+
+  
+    {
+        "title": "After Movie - Les Remparts font du Bruit #5 - Soir 2 (2024)",
+        "url": "https://youtu.be/98jxUUCfkVQ?si=oYPcNlmU1euiop5A",
+        "format": "horizontal",
+        "type": "After Movie",
+        "miniatureRoot": "miniatures/Site/Les_Remparts_font_du_Bruit/After_Movie_Les_Remparts_font_du_Bruit_5_Soir_2",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Tournage",
+                    "names": [
+                        
+                         "Benjamin Montecot"]
+                        
+
+                },
+                {
+                    "role": "Post-production",
+                    "names": [
+        
+                        "Benjamin Montecot"]
+                }
+            ]
+        }
+    },
+
+    {
+        "title": "After Movie - Les Remparts font du Bruit #5 - Soir 3 (2024)",
+        "url": "https://youtu.be/zvMD32YxuIQ?si=aCL4HqiB1F0L1Iea",
+        "format": "horizontal",
+        "type": "After Movie",
+        "miniatureRoot": "miniatures/Site/Les_Remparts_font_du_Bruit/After_Movie_Les_Remparts_font_du_Bruit_5_Soir_3",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Tournage",
+                    "names": [
+                        
+                         "Benjamin Montecot"]
+                        
+
+                },
+                {
+                    "role": "Post-production",
+                    "names": [
+        
+                        "Benjamin Montecot"]
+                }
+            ]
+        }
+    
+    },
+
+    {
+        "title": "After Movie - Les Remparts font du Bruit #5 - Soir 4 (2024)",
+        "url": "https://youtu.be/w3fc7QjU_0E?si=O-gRk7HtBJ5XQ2yG",
+        "format": "horizontal",
+        "type": "After Movie",
+        "miniatureRoot": "miniatures/Site/Les_Remparts_font_du_Bruit/After_Movie_Les_Remparts_font_du_Bruit_5_Soir_4",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp", "1_6.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Tournage",
+                    "names": [
+                        
+                         "Benjamin Montecot"]
+                        
+
+                },
+                {
+                    "role": "Post-production",
+                    "names": [
+        
+                        "Benjamin Montecot"]
+                }
+            ]
+        }
+    
+    },
+    {
+        "title": "Pepper Beef - chicken balls",
+        "url": "https://youtu.be/qMbpdJWh_5s?si=0_hjtGG2vsEgNrtT",
+        "format": "horizontal",
+        "type": "clip",
+        "miniatureRoot": "miniatures/Site/pepper_beef/Pepper_Beef_chicken_balls",
+        "miniatures": ["1_6.webp", "1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp"],
+        "credits": {
+
+          "team": [
+            {
+              "role": "RÉALISÉ PAR",
+              "names": ["Benjamin Montecot"]
+          },
+              {
+                  "role": "Assistant Réalisateur",
+                  "names": ["Marius Biotteau"]
+              },
+              {
+                  "role": "Chef Opérateur",
+                  "names": ["Lucas Le Gall"]
+              },
+              {
+                  "role": "Assistant Lumière",
+                  "names": ["Alan Roussel"]
+              },
+              {
+                  "role": "Assistante Lumière",
+                  "names": ["Camille Valeon"]
+              },
+              {
+                  "role": "Chef Décorateur",
+                  "names": ["Hector Paris"]
+              },
+              {
+                  "role": "Assistante Décoratrice",
+                  "names": ["Romane Flamen"]
+              },
+              {
+                  "role": "Maquilleuse",
+                  "names": ["Maeva Rochefort"]
+              }
+          ],
+          "additional": [
+              {
+                  "role": "Cheffe Régisseuse",
+                  "names": ["Suzanne L'Hostis"]
+              },
+              {
+                  "role": "Régisseur",
+                  "names": ["Hugo Gouin-Cossais", "Théo Samson", "Arthur Le Deant"]
+              },
+              {
+                  "role": "Régisseuse",
+                  "names": ["Maud Masse", "Laïs Faure", "Nina Carrez"]
+              },
+              {
+                  "role": "Régisseur",
+                  "names": ["Colin Grolleau"]
+              },
+              {
+                  "role": "Montage/Étalonnage",
+                  "names": ["Benjamin Montecot"]
+              }
+          ]
+      }
+  },
+    {
+        "title": "CRASH - BenDiaz Live Band (BLUE Release Party @4Bis, Rennes)",
+        "url": "https://youtu.be/3PMFrAyy1PY?si=VpIjXXg7eaaiwiBc",
+        "format": "horizontal",
+        "type": "live",
+        "miniatureRoot": "miniatures/Site/bendiaz/CRASH_BenDiaz_Live_Band",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Tournage",
+                    "names": [
+                        
+                         "Benjamin Montecot",
+                        "Roxanne Delcampe" ]
+
+                },
+                {
+                    "role": "Post-production",
+                    "names": [
+        
+                        "Benjamin Montecot"
+                       
+                    ]
+                }
+            ]
+        }
+    
+    },
+    {
+        "title": "Maïa Bloom - Checkmate Groove (Clip Officiel)",
+        "url": "https://www.youtube.com/watch?v=uY1N7O0XdAE",
+        "format": "horizontal",
+        "type": "clip",
+        "miniatureRoot": "miniatures/Site/maia_bloom/Maia_Bloom_Checkmate_Groove",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Paroles",
+                    "names": ["Maïa Bloom"]
+                },
+                {
+                    "role": "Composition",
+                    "names": ["Oscar Collet", "Maïa Bloom"]
+                },
+                {
+                    "role": "Saxophone",
+                    "names": ["Youn Lebreton"]
+                },
+                {
+                    "role": "Basse",
+                    "names": ["Elie Lancieaux"]
+                },
+                {
+                    "role": "Guitare",
+                    "names": ["Oscar Collet", "Baptiste Wagner"]
+                },
+                {
+                    "role": "Choeurs",
+                    "names": ["Maïa Bloom", "Océane Mpundu"]
+                },
+                {
+                    "role": "Mixage",
+                    "names": ["Oscar Collet"]
+                },
+                {
+                    "role": "Mastering",
+                    "names": ["L’Atelier"]
+                },
+                {
+                    "role": "Clip écrit et imaginé par",
+                    "names": ["Maïa Bloom"]
+                },
+                {
+                    "role": "Réalisé par",
+                    "names": ["LaStation.Prod"]
+                },
+                {
+                    "role": "Acteurs",
+                    "names": [
+                        "Maïa Bloom",
+                        "Maité Feuardent",
+                        "Bernard Herbert",
+                        "Jacqueline Gasnier",
+                        "Isabelle Borde",
+                        "Sebastien Borde",
+                        "Jeanne Magnon",
+                        "Sandro Gasnier",
+                        "Thaïs et Luna Feuardent",
+                        "Lili Gasnier",
+                        "Jacqueline et Rolland Gombert",
+                        "Virgile Baron",
+                        "Noah Lefresne",
+                        "Juliette Le Boucher",
+                        "Patricia Borde Gasnier",
+                        "Melvin Guyony",
+                        "Maden Testard",
+                        "Kyllian Deniel"
+                    ]
+                },
+                {
+                    "role": "Produit par",
+                    "names": ["Maïa Bloom"]
+                },
+                {
+                    "role": "Image",
+                    "names": [
+                        "Alan Roussel",
+                        "Benjamin Montecot",
+                        "Pierre Henry Caroff Rolland"
+                    ]
+                },
+                {
+                    "role": "Costumes, maquillage, décor et tout le tintouin",
+                    "names": ["Maïa Bloom", "Patricia Borde"]
+                },
+                {
+                    "role": "Régisseuses",
+                    "names": ["Patricia Borde", "Lili Gasnier"]
+                },
+                {
+                    "role": "Montage",
+                    "names": ["Benjamin Montecot"]
+                },
+                {
+                    "role": "Étalonnage",
+                    "names": ["Benjamin Montecot"]
+                }
+            ]
+        }
+    
+    },
+    {
+        "title": "Jeanne Bonjour DE PASSAGE LIVE STATION",
+        "url": "https://youtu.be/pzXSayqubO4?si=nHr0hXcBmqQ-6bc7",
+        "format": "vertical",
+        "type": "live session",
+        "miniatureRoot": "miniatures/Site/jeanne_bonjour/Jeanne_Bonjour_DE_PASSAGE_LIVE_STATION",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_4.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Mise en scène",
+                    "names": ["Marius Biotteau"]
+                },
+                {
+                    "role": "Image",
+                    "names": ["Benjamin Montecot"]
+                },
+                {
+                    "role": "Chef Opérateur",
+                    "names": ["Alan Roussel"]
+                },
+                {
+                    "role": "Lumière",
+                    "names": [
+                        "Robin Cheruel",
+                        "Marin Nupied",
+                        "Pierre Henry Caroff Rolland",
+                        "Maud Masse",
+                        "Grégoire Grasset"
+                    ]
+                },
+                {
+                    "role": "Image - Opérateur Stabilisateur",
+                    "names": ["Lucas Le Gall"]
+                },
+                {
+                    "role": "Image - Opérateur Caméra",
+                    "names": ["Roxanne Delcampe"]
+                }
+            ]
+        }
+    },
+ 
+    
+    {
+        "title": "Pepper Beef - Devil In Me",
+        "url": "https://youtu.be/zvv56PyFYps?si=QMqz3G8prqoqrB1B",
+        "format": "square",
+        "type": "clip",
+        "miniatureRoot": "miniatures/Site/pepper_beef/Pepper_Beef_Devil_In_Me",
+        "miniatures": ["1_5.webp", "1_6.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Tournage",
+                    "names": [
+                        "Marius Biotteau",
+                        "Benjamin Montecot",
+                        "Alan Roussel",
+                        "Maud Masse"
+                    ]
+                },
+                {
+                    "role": "Post-production",
+                    "names": [
+                        "Marius Biotteau",
+                        "Benjamin Montecot",
+                        "Alan Roussel"
+                    ]
+                }
+            ],
+            "additional": [
+                {
+                    "role": "Remerciements",
+                    "names": [
+                        "Juliette Le Boucher",
+                        "Gabin Le Breton",
+                        "Sam Giordano",
+                        "Golf Bluegreen",
+                        "Château de La Hunaudaye",
+                        "Gare de Loudéac"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "title": "Pepper Beef - Devil In Me",
+        "url": "https://youtu.be/zvv56PyFYps?si=QMqz3G8prqoqrB1B",
+        "format": "horizontal",
+        "type": "clip",
+        "miniatureRoot": "miniatures/Site/pepper_beef/Pepper_Beef_Devil_In_Me",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Tournage",
+                    "names": [
+                        "Marius Biotteau",
+                        "Benjamin Montecot",
+                        "Alan Roussel",
+                        "Maud Masse"
+                    ]
+                },
+                {
+                    "role": "Post-production",
+                    "names": [
+                        "Marius Biotteau",
+                        "Benjamin Montecot",
+                        "Alan Roussel"
+                    ]
+                }
+            ],
+            "additional": [
+                {
+                    "role": "Remerciements",
+                    "names": [
+                        "Juliette Le Boucher",
+                        "Gabin Le Breton",
+                        "Sam Giordano",
+                        "Golf Bluegreen",
+                        "Château de La Hunaudaye",
+                        "Gare de Loudéac"
+                    ]
+                }
+            ]
+        }
+    },
+
+    {
+        "title": "Dans Le Fond De Mes Yeux (Clip officiel)",
+        "url": "https://youtu.be/vwCbnIxsM-g?si=FnRps-YP4qsoE2wa",
+        "format": "horizontal",
+        "type": "clip",
+        "miniatureRoot": "miniatures/Site/david_pistol/Dans_Le_Fond_De_Mes_Yeux",
+        "miniatures": ["1_10.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp", "1_6.webp", "1_7.webp", "1_8.webp", "1_9.webp", "1_11.webp"],
+        "credits": {
+            "production": {
+      "label": "Réalisé par",
+      "value": "La Station Production"
+    },
+    "team": [
+      {
+        "role": "Réalisateur",
+        "names": ["Marius Biotteau"]
+      },
+      {
+        "role": "Cadreur",
+        "names": ["Benjamin Montecot"]
+      },
+      {
+        "role": "Chef opé",
+        "names": ["Alan Roussel"]
+      },
+      {
+        "role": "Montage",
+        "names": ["Marius Biotteau", "Benjamin Montecot"]
+      },
+      {
+        "role": "Assistante caméra",
+        "names": ["Maud Masse"]
+      },
+      {
+        "role": "Electro",
+        "names": [
+          "Pierre Henry Caroff Rolland",
+          "Marin Nupied",
+          "Arthur Le Deant",
+          "Jules Bernard",
+          "Mathilde Moutardier"
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "role": "Typographie",
+        "names": ["Romain Petton-Martin"]
+      },
+      {
+        "role": "Cover",
+        "names": ["Brieuc Girodon"]
+      },
+      {
+        "role": "Mix / Master",
+        "names": ["Elliot Le Borgne"]
+      },
+      {
+        "role": "Prod",
+        "names": ["Dj sc4m"]
+      }
+    ]
+  }
+},
+
+    {
+        "title": "photos live station",
+        "url": "URL de la vidéo",
+        "format": "square",
+        "type": "live session",
+        "miniatureRoot": "miniatures/Site/photos_live_station",
+        "miniatures": [
+            "bendiaz/1_5.webp", "bendiaz/1_6.webp", "bendiaz/1_7.webp", "bendiaz/1_8.webp", "bendiaz/1_9.webp", "bendiaz/1_10.webp",
+            "bendiaz/1_11.webp", "bendiaz/1_12.webp", "bendiaz/1_13.webp", "bendiaz/1_14.webp",
+            "jeanne_bonjour/1_5.webp", "jeanne_bonjour/1_6.webp", "jeanne_bonjour/1_7.webp",
+            "arpseze/1_1.webp", "arpseze/1_2.webp", "arpseze/1_3.webp", "arpseze/1_4.webp", "arpseze/1_5.webp",
+            "helios_flowers/1_1.webp", "helios_flowers/1_2.webp", "helios_flowers/1_3.webp"]
+    },
+
+
+    {
+        "title": "Zosterae - Boosté (Live Session)",
+        "url": "https://www.youtube.com/watch?v=zCw_akGgxSo",
+        "format": "horizontal",
+        "type": "live session",
+        "miniatureRoot": "miniatures/Site/zosterae/boostée",
+        "miniatures": ["1_9.webp", "1_10.webp", "1_3.webp", "1_4.webp", "1_5.webp", "1_6.webp", "1_7.webp", "1_8.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Vidéo",
+                    "names": [
+                        "Benjamin Montecot",
+                        "Marius Biotteau",
+                        "Alan Roussel",
+                        "Roméo Des Cognets"
+                    ]
+                },
+                {
+                    "role": "Son",
+                    "names": [
+                        "Jean Richard",
+                        "Arthur Broyart"
+                    ]
+                }
+            ],
+            "additional": [
+                {
+                    "role": "Bassiste",
+                    "names": ["Camille Dias"]
+                },
+                {
+                    "role": "Batteur",
+                    "names": ["Ewan Douard"]
+                },
+                {
+                    "role": "Claviériste",
+                    "names": ["Vincent Héno"]
+                },
+                {
+                    "role": "Guitariste",
+                    "names": ["Pierre Cario"]
+                },
+                {
+                    "role": "Saxophoniste",
+                    "names": ["Yohann Le Bourdonnec"]
+                }
+            ]
+        }
+    
+    },
+
+    {
+        "title": "Zosterae - Ambivalent (Live Session)",
+        "url": "https://youtu.be/OlafXYvRzpk?si=ysvTs7JECiCBlyQg",
+        "format": "horizontal",
+        "type": "live session",
+        "miniatureRoot": "miniatures/Site/zosterae/ambivalent",
+        "miniatures": ["1_3.webp", "1_4.webp", "1_5.webp", "1_6.webp", "1_8.webp", "1_9.webp", "1_11.webp", "1_1.webp", "1_2.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Vidéo",
+                    "names": [
+                        "Benjamin Montecot",
+                        "Marius Biotteau",
+                        "Alan Roussel",
+                        "Roméo Des Cognets"
+                    ]
+                },
+                {
+                    "role": "Son",
+                    "names": [
+                        "Jean Richard",
+                        "Arthur Broyart"
+                    ]
+                }
+            ],
+            "additional": [
+                {
+                    "role": "Bassiste",
+                    "names": ["Camille Dias"]
+                },
+                {
+                    "role": "Batteur",
+                    "names": ["Ewan Douard"]
+                },
+                {
+                    "role": "Claviériste",
+                    "names": ["Vincent Héno"]
+                },
+                {
+                    "role": "Guitariste",
+                    "names": ["Pierre Cario"]
+                },
+                {
+                    "role": "Saxophoniste",
+                    "names": ["Yohann Le Bourdonnec"]
+                }
+            ]
+        }
+    
+    },
+
+    {
+        "title": "HELIOS FLOWER  Anastasia Counts Invisible Diamonds  LIVE STATION",
+        "url": "https://www.youtube.com/shorts/PjZM_-LkEdQ",
+        "format": "vertical",
+        "type": "live session",
+        "miniatureRoot": "miniatures/Site/Helios_Flowers/HELIOS_FLOWER_Anastasia_Counts_Invisible_Diamonds_LIVE_STATION",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Mise en scène",
+                    "names": ["Marius Biotteau"]
+                },
+                {
+                    "role": "Image",
+                    "names": ["Benjamin Montecot"]
+                },
+                {
+                    "role": "Chef Opérateur",
+                    "names": ["Alan Roussel"]
+                },
+                {
+                    "role": "Lumière",
+                    "names": [
+                        "Robin Cheruel",
+                        "Marin Nupied",
+                        "Pierre Henry Caroff Rolland",
+                        "Maud Masse",
+                        "Arthur Le Deant"
+                    ]
+                },
+                {
+                    "role": "Image - Opérateur Stabilisateur",
+                    "names": ["Alexis Chauvel"]
+                },
+                {
+                    "role": "Image - Opérateur Caméra",
+                    "names": ["Roxanne Delcampe"]
+                }
+            ]
+        }
+    },
+
+    {
+        "title": "Maïa Bloom  Fat Monkey Peelings  LIVE STATION",
+        "url": "https://www.youtube.com/watch?v=Oybzku6UDOg",
+        "format": "vertical",
+        "type": "live session",
+        "miniatureRoot": "miniatures/Site/maia_bloom/Maïa_Bloom _Fat_Monkey_Peelings _LIVE_STATION",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Mise en scène",
+                    "names": ["Marius Biotteau"]
+                },
+                {
+                    "role": "Image",
+                    "names": ["Benjamin Montecot"]
+                },
+                {
+                    "role": "Chef Opérateur",
+                    "names": ["Alan Roussel"]
+                },
+                {
+                    "role": "Lumière",
+                    "names": [
+                        "Robin Cheruel",
+                        "Marin Nupied",
+                        "Pierre Henry Caroff Rolland",
+                        "Maud Masse",
+                        "Arthur Le Deant"
+                    ]
+                },
+                {
+                    "role": "Image - Opérateur Stabilisateur",
+                    "names": ["Alexis Chauvel"]
+                },
+                {
+                    "role": "Image - Opérateur Caméra",
+                    "names": ["Roxanne Delcampe"]
+                }
+            ]
+        }
+    }
+
+
+
+    
+    
+
+
+]

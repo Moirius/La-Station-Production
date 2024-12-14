@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   
+    <meta charset="UTF-8">
+    
+    <title>Portfolio Vidéo</title>
+    <!-- Lien vers la feuille de styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Logo principal -->
+    <div id="logo-container">
+        <img src="./miniatures/elements/LOGO_TRANSPARENT_BLANC.png" id="logo-image" class="logo-noir" alt="Logo du site">
+    </div>
+
+    <!-- Section des boutons de filtrage -->
+    <div id="filter-buttons">
+        <button class="filter-btn" data-type="all">All</button>
+        <button class="filter-btn" data-type="clip">Clips</button>
+        <button class="filter-btn" data-type="live">Lives</button>
+        <button class="filter-btn" data-type="live session">Live Sessions</button>
+        <button class="filter-btn" data-type="After Movie">After Movies</button>
+    </div>
+
+    <!-- Grille des miniatures (injectée par JavaScript) -->
+    <div class="moodboard-container">
+        <div class="moodboard-grid"></div>
+    </div>
+
+    <!-- Fenêtre modale pour afficher les vidéos YouTube -->
+    <div id="youtube-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe 
+                id="youtube-player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Script principal -->
+    <script src="https://unpkg.com/scrollbooster@3/dist/scrollbooster.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    
+    <!-- Tes scripts -->
+    <script src="navigation.js"></script>
+    <script src="script.js"></script>
+
+    <div id="log-list" style="position: fixed; bottom: 0; left: 0; width: 100%; max-height: 200px; overflow-y: auto; background: rgba(0, 0, 0, 0.9); color: white; font-size: 12px; padding: 10px; z-index: 10000;"></div>
+</body>
+</html>

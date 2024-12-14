@@ -1,0 +1,374 @@
+/* ---- Variables Globales ---- */
+:root {
+  --gap: 5px;
+  --border-radius: 20px;
+  --z-index-logo: 10001;
+  --z-index-modal: 10000;
+  --background-color: #000;
+  --transition-duration: 0.3s;
+  --transition-ease: ease;
+  --transform-scale-init: 1.5;
+  --user-select: none;
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* ---- Style Global ---- */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--background-color);
+}
+
+/* ---- Conteneur du logo ---- */
+#logo-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 660px;
+  height: 450px;
+  transform: translate(-50%, -50%);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  z-index: -1; /* Par défaut, en arrière-plan */
+  pointer-events: auto;
+
+  transition: all var(--transition-duration) var(--transition-ease);
+}
+
+/* Style de l'image du logo */
+#logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all var(--transition-duration) var(--transition-ease);
+
+}
+
+/* Logo agrandi au premier plan */
+#logo-container.logo-agrandi {
+  width: 36vw;
+  height: 24.9vw;
+  z-index: var(--z-index-logo) !important; /* Assure que le logo passe devant la modale */
+  transform: translate(-50%, -50%);
+}
+
+/* ---- Grille des miniatures ---- */
+.moodboard-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(25, 125px);
+  grid-template-rows: repeat(auto, 75px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center center; /* Important pour éviter les conflits avec scale */
+  /* transition: transform 0.5s ease; */
+  outline: 2px transparent;
+  cursor: grab;
+
+  touch-action: none; /* Empêche le comportement par défaut comme le défilement */
+
+  will-change: transform;
+  backface-visibility: hidden; /* Améliore les performances */
+  user-select: none;
+
+}
+
+.moodboard-grid:active {
+  cursor: grabbing;
+}
+
+.moodboard-grid.filter-mode {
+  grid-template-columns: repeat(11, 100px);
+}
+
+
+
+
+
+/* ---- Miniatures ---- */
+.miniature {
+  pointer-events: auto;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  background-color: #333;
+  position: relative;
+  user-select: none;
+  will-change: transform;
+}
+
+.miniature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  _opacity: 0;
+  transition: opacity 0.45s ease-in-out;
+}
+
+img.loading {
+  display: none;
+}
+
+img.loaded {
+  display: block;
+}
+
+.miniature.horizontal {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+
+.miniature.vertical {
+  grid-row: span 2;
+  aspect-ratio: 9 / 16;
+}
+
+/* Miniatures vides avec bord arrondi */
+.miniature-vide-horizontal,
+.miniature-vide-vertical,
+.miniature-vide-square {
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.miniature-vide-horizontal {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+
+.miniature-vide-vertical {
+  grid-row: span 2;
+  aspect-ratio: 9 / 16;
+}
+
+.miniature-vide-square {
+  /* Pour les carrés, pas besoin de span car ils occupent une seule cellule */
+  aspect-ratio: 1;
+}
+/* ---- Désactivation de la sélection de texte pour le logo ---- */
+#logo-container,
+#logo-image {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* ---- Style de la fenêtre modale ---- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: var(--z-index-modal);
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;    /* Centre verticalement */
+    pointer-events: none;
+}
+
+
+.modal.active {
+  display: flex;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.modal-content {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  margin: auto; /* Centre le contenu horizontalement */
+  user-select: none;
+}
+
+
+/* Bouton pour fermer la modale */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
+}
+
+/* Désactive les clics sur les miniatures lorsque le logo est agrandi */
+.logo-agrandi .miniature {
+  pointer-events: none;
+}
+
+#filter-buttons {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10002; /* Devant les miniatures */
+  display: flex;
+  gap: 10px;
+}
+
+#filter-buttons button {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#filter-buttons button:hover {
+  background: #555;
+}
+
+body.pointer-locked {
+  cursor: grab;
+}
+
+body.pointer-locked:active {
+  cursor: grabbing;
+}
+
+
+/* Effet de survol pour les miniatures */
+.miniature:hover {
+  transform: scale(1.05); /* Zoom léger */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet de survol pour le bouton de fermeture de la modale */
+.close:hover {
+  color: #ff5555; /* Rouge vif */
+  transform: scale(1.2); /* Agrandir légèrement */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Effet de survol pour le logo */
+#logo-container:hover {
+  transform: translate(-50%, -50%) scale(1.2); /* Zoom léger */
+  transition: transform 0.3s ease;
+}
+
+#filter-buttons {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10002;
+  display: flex;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.filter-btn {
+  background: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.filter-btn:hover {
+  background: #555;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Panel de crédits */
+.credits-panel {
+  position: fixed;
+  top: 50%;
+  left: 40px; /* Position à gauche */
+  transform: translateY(-50%);
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: transparent; /* Fond transparent */
+  color: white;
+  padding: 2rem;
+  transition: opacity 0.3s var(--transition-ease);
+  z-index: var(--z-index-modal);
+  opacity: 0;
+  pointer-events: none;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.credits-panel.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.credits-header {
+  margin-bottom: 2rem;
+}
+
+.credits-header h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: white;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.credits-section {
+  margin-bottom: 1.5rem;
+}
+
+.credits-role {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.credits-name {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.2rem 0;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.7); /* Couleur initiale */
+}
+
+.credits-name:hover {
+  transform: scale(1.2); /* Agrandit légèrement le texte */
+  color: #ffffff; /* Change la couleur en blanc pur */
+}
+
+/* Cache la croix de fermeture puisque le générique se fermera avec la modale */
+.credits-close {
+  display: none;
+}
+
