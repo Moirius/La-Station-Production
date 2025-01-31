@@ -1,15 +1,207 @@
 /* ---- Variables Globales ---- */
 :root {
-  --gap: 5px;
-  --border-radius: 20px;
-  --z-index-logo: 10001;
-  --z-index-modal: 10000;
+
+  
+
   --background-color: #000;
   --transition-duration: 0.3s;
   --transition-ease: ease;
   --transform-scale-init: 1.5;
   --user-select: none;
 }
+
+@font-face {
+  font-family: 'aventa';
+  src: url('POLICES/Aventa-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'arges';
+  src: url('POLICES/AT Arges Black Condensed.otf') format('truetype');
+}
+
+
+/* ---- Grille des miniatures ---- */
+.moodboard-grid {
+  display: grid;
+  gap: 1vh;
+  grid-template-columns: repeat(25, 70px);
+  grid-template-rows: repeat(auto, 25px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center center; /* Important pour éviter les conflits avec scale */
+  /* transition: transform 0.5s ease; */
+  outline: 2px transparent;
+  cursor: grab;
+
+  touch-action: none; /* Empêche le comportement par défaut comme le défilement */
+
+  will-change: transform;
+  backface-visibility: hidden; /* Améliore les performances */
+  user-select: none;
+  --border-radius: 1vh;
+
+
+}
+
+
+
+.moodboard-grid:active {
+  cursor: grabbing;
+}
+
+.moodboard-grid.filter-mode {
+  grid-template-columns: repeat(8, 60px);
+}
+
+
+.moodboard-container.moodboard-reduced .moodboard-grid {
+  display: grid;
+  gap: 0.5vh; /* Espacement entre les miniatures réduit */
+  grid-template-columns: repeat(25, 2.5vh); /* Colonnes étroites */
+  grid-template-rows: repeat(auto, 0vh); /* Lignes étroites */
+  transform: scale(0.5); /* Réduction de l'échelle */
+
+  --border-radius: 0.5vh; /* Bord réduit */
+}
+
+
+
+.moodboard-container.moodboard-full .moodboard-grid {
+  display: grid;
+  gap: 15px; /* Espacement entre les miniatures normal */
+  grid-template-columns: repeat(30, 5vh); /* Colonnes normales */
+  grid-template-rows: repeat(auto, 0vh); /* Lignes normales */
+  transform: scale(1); /* Taille normale */
+
+  border-radius: 15px; /* Bord normal */
+}
+
+#logo-container {
+  text-align: left;
+  margin: 0;
+  padding: 2vh;
+  position: fixed;
+  z-index: 100;
+  user-select: none;
+}
+
+
+#logo-container img {
+  max-width: 40%; /* Assure que l'image respecte les dimensions */
+  transition: max-width 0.5s ease, transform 0.5s ease; /* Transition fluide */
+}
+
+/* Logo réduit */
+.logo-small img {
+
+  text-align: left;
+  /* margin: 0; */
+  padding: 2vh;
+  position: fixed;
+  /* left: 1vh; */
+  /* bottom: 50%; */
+  z-index: 100;
+  user-select: none;
+  transform: scale(0.5); /* Réinitialisation de l'effet */
+  transform-origin: top left;
+}
+
+.logo-small img:hover {
+  transform: scale(0.53); /* Réinitialisation de l'effet */
+}
+
+
+/* Logo agrandi */
+.logo-large img {
+
+  text-align: left;
+  transform-origin: top left;
+  padding: 2vh;
+  position: fixed;
+  z-index: 100;
+  user-select: none;
+  transform: scale(1); /* Réinitialisation de l'effet */
+}
+
+/* Masquer les boutons et le texte */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease; /* Disparition fluide */
+}
+
+
+#description {
+  position: fixed;
+  top: 30vh;
+  text-align: left;
+  /* margin: 110px; */
+  padding: 11vh;
+  font-family: 'aventa'; /* Police que vous avez intégrée */
+  color: white;
+  z-index: 100;
+  
+  /* line-height: 5vh; */
+
+}
+
+#description h1 {
+  font-size: 4.5vh;
+  font-weight: bold;
+
+  line-height: 30vh;
+}
+
+#description p {
+  font-size: 3.5vh;
+  line-height: 3vh;
+}
+
+
+
+#filter-buttons {
+  position: absolute;
+  top: 12vh; /* Distance depuis le haut */
+  right: 4.5vh; /* Distance depuis le bord droit */
+  display: flex;
+  flex-direction: column; /* Aligner les boutons verticalement */
+  align-items: flex-start; /* Les aligner à gauche */
+  gap: 5vh; /* Espace entre les boutons */
+  z-index: 100;
+  /* margin: 20px; */
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-family: 'arges', sans-serif; /* Police intégrée */
+  font-size: 13vh;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s;
+  line-height: 11vh; /* Espacement entre les lignes à l'intérieur d'un bouton */
+  /* font-weight: 9vh; */
+  /* Supprimer `gap` ici car ce n'est pas applicable */
+}
+
+.filter-btn:hover {
+  color: #e0e0e0;
+  transform: scale(1.05); /* Zoom léger */
+}
+
+
+.unstyled-link {
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit;        /* Utilise la couleur du texte environnant */
+  font: inherit;         /* Utilise la même police que le texte environnant */
+}
+
+
+
 
 .no-select {
   user-select: none;
@@ -25,68 +217,10 @@ body {
   background-color: var(--background-color);
 }
 
-/* ---- Conteneur du logo ---- */
-#logo-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 660px;
-  height: 450px;
-  transform: translate(-50%, -50%);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  z-index: -1; /* Par défaut, en arrière-plan */
-  pointer-events: auto;
 
-  transition: all var(--transition-duration) var(--transition-ease);
-}
 
-/* Style de l'image du logo */
-#logo-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: all var(--transition-duration) var(--transition-ease);
 
-}
 
-/* Logo agrandi au premier plan */
-#logo-container.logo-agrandi {
-  width: 36vw;
-  height: 24.9vw;
-  z-index: var(--z-index-logo) !important; /* Assure que le logo passe devant la modale */
-  transform: translate(-50%, -50%);
-}
-
-/* ---- Grille des miniatures ---- */
-.moodboard-grid {
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(25, 125px);
-  grid-template-rows: repeat(auto, 75px);
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: center center; /* Important pour éviter les conflits avec scale */
-  /* transition: transform 0.5s ease; */
-  outline: 2px transparent;
-  cursor: grab;
-
-  touch-action: none; /* Empêche le comportement par défaut comme le défilement */
-
-  will-change: transform;
-  backface-visibility: hidden; /* Améliore les performances */
-  user-select: none;
-
-}
-
-.moodboard-grid:active {
-  cursor: grabbing;
-}
-
-.moodboard-grid.filter-mode {
-  grid-template-columns: repeat(11, 100px);
-}
 
 
 
@@ -97,7 +231,7 @@ body {
   pointer-events: auto;
   overflow: hidden;
   border-radius: var(--border-radius);
-  background-color: #333;
+  /* background-color: #333; */
   position: relative;
   user-select: none;
   will-change: transform;
@@ -110,14 +244,18 @@ body {
   pointer-events: none;
   _opacity: 0;
   transition: opacity 0.45s ease-in-out;
+  font-size: 0; /* Cache le texte alternatif */
+  visibility: hidden; /* Cache l'image et l'emoji placeholder */
 }
 
 img.loading {
   display: none;
+  
 }
 
 img.loaded {
   display: block;
+  visibility: visible; /* Montre l'image après chargement */
 }
 
 .miniature.horizontal {
@@ -153,20 +291,13 @@ img.loaded {
   /* Pour les carrés, pas besoin de span car ils occupent une seule cellule */
   aspect-ratio: 1;
 }
-/* ---- Désactivation de la sélection de texte pour le logo ---- */
-#logo-container,
-#logo-image {
-  user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
 
 /* ---- Style de la fenêtre modale ---- */
 .modal {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0vh;
+    left: 0vh;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -178,63 +309,41 @@ img.loaded {
 
 
 .modal.active {
-  display: flex;
+  display:flex;
   pointer-events: auto;
   user-select: none;
 }
 
 .modal-content {
   position: relative;
-  width: 80%;
-  max-width: 900px;
+  width: 80vh;
+  max-width: 80vh;
   margin: auto; /* Centre le contenu horizontalement */
   user-select: none;
 }
 
 
+
 /* Bouton pour fermer la modale */
-.close {
+/* .close {
   position: absolute;
   top: 10px;
   right: 20px;
   color: white;
   font-size: 24px;
   cursor: pointer;
-}
+} */
 
 iframe {
-  width: 100%;
-  height: 500px;
+  width: 80vh;
+  height: 40vh;
+
 }
 
-/* Désactive les clics sur les miniatures lorsque le logo est agrandi */
-.logo-agrandi .miniature {
-  pointer-events: none;
-}
 
-#filter-buttons {
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10002; /* Devant les miniatures */
-  display: flex;
-  gap: 10px;
-}
 
-#filter-buttons button {
-  background: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
 
-#filter-buttons button:hover {
-  background: #555;
-}
+
 
 body.pointer-locked {
   cursor: grab;
@@ -259,66 +368,26 @@ body.pointer-locked:active {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Effet de survol pour le logo */
-#logo-container:hover {
-  transform: translate(-50%, -50%) scale(1.2); /* Zoom léger */
-  transition: transform 0.3s ease;
-}
 
-#filter-buttons {
-  position: fixed;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10002;
-  display: flex;
-  gap: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
-  border-radius: 30px;
-}
 
-.filter-btn {
-  background: #333;
-  color: #fff;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.filter-btn:hover {
-  background: #555;
-  transform: translateY(-2px);
-}
-
-.filter-btn.active {
-  background: #fff;
-  color: #000;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
-}
 
 /* Panel de crédits */
 .credits-panel {
   position: fixed;
-  top: 50%;
-  left: 40px; /* Position à gauche */
-  transform: translateY(-50%);
-  width: 300px;
-  max-height: 80vh;
-  overflow-y: auto;
+  top: 35vh;
+  left: 4vh; /* Position à gauche */
+  width: 30vh;
+
+
   background: transparent; /* Fond transparent */
   color: white;
-  padding: 2rem;
+  padding: 2vh;
   transition: opacity 0.3s var(--transition-ease);
   z-index: var(--z-index-modal);
   opacity: 0;
   pointer-events: none;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 800;
+  font-family: 'aventa';
+  font-weight: 8vh;
   text-transform: uppercase;
 }
 
@@ -328,42 +397,42 @@ body.pointer-locked:active {
 }
 
 .credits-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1vh;
 }
 
 .credits-header h2 {
-  margin: 0;
-  font-size: 2rem;
+  margin: 0vh;
+  font-size: 2vh;
   color: white;
-  font-weight: 900;
-  letter-spacing: -0.02em;
+  font-weight: 9vh;
+  /* letter-spacing: -0.02vh; */
 }
 
 .credits-section {
-  margin-bottom: 1.5rem;
+  margin-bottom: rem;
 }
 
 .credits-role {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
+  color: rgb(255, 255, 255);
+  font-size: 1.5vh;
+  margin-bottom: 0.03vh;
+  font-weight: 900;
+  letter-spacing: 0.05vh;
 }
 
 .credits-name {
   display: inline-block;
   cursor: pointer;
-  padding: 0.2rem 0;
-  margin-right: 0.5rem;
-  font-size: 1rem;
-  font-weight: 700;
+  padding: 0.1vh;
+  margin-right: 0.5vh;
+  font-size: 1.2vh;
+  font-weight: 70vh;
 
   color: rgba(255, 255, 255, 0.7); /* Couleur initiale */
 }
 
 .credits-name:hover {
-  transform: scale(1.2); /* Agrandit légèrement le texte */
+  transform: scale(1.1); /* Agrandit légèrement le texte */
   color: #ffffff; /* Change la couleur en blanc pur */
 }
 
@@ -371,4 +440,437 @@ body.pointer-locked:active {
 .credits-close {
   display: none;
 }
+
+
+
+.responsive-title .indented {
+  display: block; /* Pour gérer les espaces sur une ligne séparée */
+  margin-left: 73%; /* Espacement basé sur la largeur de l'écran */
+}
+
+
+
+
+
+/* ---- Smartphones ---- */
+/* Portrait */
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+
+  .responsive-title .indented {
+    margin-left: 40%; /* Réduire l'espacement pour les petits écrans */
+  }
+
+  .moodboard-container.moodboard-reduced .moodboard-grid {
+    grid-template-columns: repeat(25, 1.5vh); /* Colonnes étroites */
+  }
+  
+  .moodboard-container.moodboard-full .moodboard-grid {
+    grid-template-columns: repeat(25, 4vh); /* Colonnes normales */
+  }
+
+  #filter-buttons {
+    top: 5vh; /* Distance depuis le haut */
+    left: 30vh; /* Distance depuis le bord droit */
+    gap: 2.4vh; /* Espace entre les boutons */
+  }
+  
+  .filter-btn {
+    font-size: 7vh;
+    line-height: 6vh; /* Espacement entre les lignes à l'intérieur d'un bouton */
+  }
+
+
+  #logo-container {
+    padding: 0vh;
+  }
+  
+  
+  #logo-container img {
+    max-width: 60%; /* Assure que l'image respecte les dimensions */
+  }
+  
+  /* Logo réduit */
+  .logo-small img {
+    padding: 2vh;
+  }
+
+  #description {
+    top: 10vh;
+    padding: 5vh;
+  }
+  
+  #description h1 {
+    font-size: 2vh;
+    line-height: 20vh;
+  }
+  
+  #description p {
+    font-size: 1.8vh;
+    line-height: 2.5vh;
+  }
+
+/* ---- Style de la fenêtre modale ---- */
+.modal-content {
+width: 40vh;
+max-width: 40vh;
+bottom: 20vh;
+}
+
+
+iframe {
+width: 40vh;
+height: 20vh;
+}
+
+
+
+
+/* Panel de crédits */
+.credits-panel {
+  position: fixed;
+  top: 45vh;
+  left: 6.5vh; /* Position à gauche */
+  width: 30vh;
+  padding: 2vh;
+  opacity: 0;
+  font-weight: 8vh;
+}
+
+
+
+}
+
+
+
+
+
+
+/* Paysage */
+@media only screen and (max-width: 899px) and (orientation: landscape) {
+
+
+
+
+
+
+
+  .responsive-title .indented {
+    margin-left: 40%; /* Réduire l'espacement pour les petits écrans */
+  }
+
+  .moodboard-container.moodboard-reduced .moodboard-grid {
+    grid-template-columns: repeat(25, 2vh); /* Colonnes étroites */
+  }
+  
+  .moodboard-container.moodboard-full .moodboard-grid {
+    grid-template-columns: repeat(25, 4vh); /* Colonnes normales */
+  }
+
+  #filter-buttons {
+    top: 8vh; /* Distance depuis le haut */
+    left: 150vh; /* Distance depuis le bord droit */
+    gap: 3vh; /* Espace entre les boutons */
+  }
+  
+  .filter-btn {
+    font-size: 12vh;
+    line-height: 10vh; /* Espacement entre les lignes à l'intérieur d'un bouton */
+  }
+
+
+  #logo-container {
+    padding: 0vh;
+  }
+  
+  
+  #logo-container img {
+    max-width: 35%; /* Assure que l'image respecte les dimensions */
+  }
+  
+  /* Logo réduit */
+  .logo-small img {
+    padding: 2vh;
+  }
+
+  #description {
+    top: 40vh;
+    padding: 4vh;
+    left: 5vh;
+  }
+  
+  #description h1 {
+    font-size: 3.5vh;
+    line-height: 5vh;
+  }
+  
+  #description p {
+    font-size: 3vh;
+    line-height: 4vh;
+  }
+
+/* ---- Style de la fenêtre modale ---- */
+.modal-content {
+width: 40vh;
+max-width: 40vh;
+bottom: 20vh;
+}
+
+
+iframe {
+width: 40vh;
+height: 20vh;
+}
+
+
+
+
+/* Panel de crédits */
+.credits-panel {
+  position: fixed;
+  top: 45vh;
+  left: 6.5vh; /* Position à gauche */
+  width: 30vh;
+  padding: 2vh;
+  opacity: 0;
+  font-weight: 8vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/* ---- Tablettes ---- */
+/* Portrait */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+  .responsive-title .indented {
+    margin-left: 55%; /* Réduire l'espacement pour les petits écrans */
+  }
+
+  .moodboard-container.moodboard-reduced .moodboard-grid {
+    grid-template-columns: repeat(30, 1.5vh); /* Colonnes étroites */
+  }
+  
+  .moodboard-container.moodboard-full .moodboard-grid {
+    grid-template-columns: repeat(25, 4vh); /* Colonnes normales */
+  }
+
+  #filter-buttons {
+    top: 6vh; /* Distance depuis le haut */
+    left: 45vh; /* Distance depuis le bord droit */
+    gap: 2.4vh; /* Espace entre les boutons */
+  }
+  
+  .filter-btn {
+    font-size: 6vh;
+    line-height: 5vh; /* Espacement entre les lignes à l'intérieur d'un bouton */
+  }
+
+
+  #logo-container {
+    padding: 0vh;
+  }
+  
+  
+  #logo-container img {
+    max-width: 50%; /* Assure que l'image respecte les dimensions */
+  }
+  
+  /* Logo réduit */
+  .logo-small img {
+    padding: 2vh;
+  }
+
+  #description {
+    top: 20vh;
+    padding: 6vh;
+  }
+  
+  #description h1 {
+    font-size: 1.8vh;
+    line-height: 3vh;
+  }
+  
+  #description p {
+    font-size: 1.5vh;
+    line-height: 2.2vh;
+  }
+
+/* ---- Style de la fenêtre modale ---- */
+.modal-content {
+width: 40vh;
+max-width: 40vh;
+bottom: 20vh;
+}
+
+
+iframe {
+width: 40vh;
+height: 20vh;
+}
+
+
+
+
+/* Panel de crédits */
+.credits-panel {
+  position: fixed;
+  top: 45vh;
+  left: 6.5vh; /* Position à gauche */
+  width: 30vh;
+  padding: 2vh;
+  opacity: 0;
+  font-weight: 8vh;
+}
+
+}
+
+/* Paysage */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+
+
+
+
+
+}
+
+
+/* iPad Pro 11" et 12.9" en portrait */
+@media (min-width: 834px) and (max-width: 1366px) and (orientation: portrait) {
+  /* Styles spécifiques pour iPad Pro en portrait */
+}
+
+/* iPad Pro 11" et 12.9" en paysage */
+@media (min-width: 834px) and (max-width: 1366px) and (orientation: landscape) {
+  /* Styles spécifiques pour iPad Pro en paysage */
+
+  .responsive-title .indented {
+    margin-left: 40%; /* Réduire l'espacement pour les petits écrans */
+  }
+
+  .moodboard-container.moodboard-reduced .moodboard-grid {
+    grid-template-columns: repeat(22, 2vh); /* Colonnes étroites */
+  }
+  
+  .moodboard-container.moodboard-full .moodboard-grid {
+    grid-template-columns: repeat(25, 4vh); /* Colonnes normales */
+  }
+
+  #filter-buttons {
+    top: 8vh; /* Distance depuis le haut */
+    left: 110vh; /* Distance depuis le bord droit */
+    gap: 5vh; /* Espace entre les boutons */
+  }
+  
+  .filter-btn {
+    font-size: 12vh;
+    line-height: 10vh; /* Espacement entre les lignes à l'intérieur d'un bouton */
+  }
+
+
+  #logo-container {
+    padding: 0vh;
+  }
+  
+  
+  #logo-container img {
+    max-width: 35%; /* Assure que l'image respecte les dimensions */
+  }
+  
+  /* Logo réduit */
+  .logo-small img {
+    padding: 2vh;
+  }
+
+  #description {
+    top: 25vh;
+    padding: 2vh;
+    left: 5vh;
+  }
+  
+  #description h1 {
+    font-size: 3.5vh;
+    line-height: 20vh;
+  }
+  
+  #description p {
+    font-size: 3vh;
+    line-height: 4vh;
+  }
+
+/* ---- Style de la fenêtre modale ---- */
+.modal-content {
+width: 40vh;
+max-width: 40vh;
+bottom: 10vh;
+}
+
+
+iframe {
+width: 40vh;
+height: 20vh;
+}
+
+
+
+
+/* Panel de crédits */
+.credits-panel {
+  position: fixed;
+  top: 25vh;
+  left: 6.5vh; /* Position à gauche */
+  width: 30vh;
+  padding: 2vh;
+  opacity: 0;
+  font-weight: 8vh;
+}
+
+
+}
+
+/* ---- Ordinateurs portables ---- */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+
+}
+
+/* ---- Grands écrans ---- */
+@media only screen and (min-width: 1441px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

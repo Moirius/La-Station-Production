@@ -1,10 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Éléments DOM
+    const isSmallScreen = window.innerWidth < 768; // Écran inférieur à 768px
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
     const moodboard = document.querySelector('.moodboard-grid');
     const modal = document.getElementById("youtube-modal");
     const closeModal = document.querySelector(".close");
     const filterButtons = document.querySelectorAll(".filter-btn");
-    const logoContainer = document.getElementById('logo-container');
+    const moodboardContainer = document.querySelector('.moodboard-container');
+const logoContainer = document.getElementById('logo-container');
+const description = document.getElementById('description');
+// const whiteRectangle1 = document.getElementById('white-rectangle'); // Premier rectangle
+// const whiteRectangle2 = document.getElementById('white-rectangle2'); // Deuxième rectangle
+
+
     const logoImage = document.getElementById('logo-image');
     const creditsPanel = createCreditsPanel();
 
@@ -15,23 +24,88 @@ document.addEventListener("DOMContentLoaded", function () {
     const gridNavigation = new GridNavigation(moodboard);
 
     // Fonctions de logging
+
+
+// Initialise la grille réduite
+moodboardContainer.classList.add('moodboard-reduced');
+gridNavigation.centerGrid(); // Centre la grille au chargement
+
+// État initial
+let isGridExpanded = false;
+
+function toggleView(isExpanded) {
+    const filterButtons = document.getElementById('filter-buttons');
+    const whiteRectangle1 = document.getElementById('white-rectangle');
+    const whiteRectangle2 = document.getElementById('white-rectangle2');
+
+    if (isExpanded) {
+        moodboardContainer.classList.remove('moodboard-reduced');
+        moodboardContainer.classList.add('moodboard-full');
+        logoContainer.classList.remove('logo-large');
+        logoContainer.classList.add('logo-small');
+        description.classList.add('hidden');
+        filterButtons.classList.add('hidden');
+        whiteRectangle1.classList.add('hidden');
+        whiteRectangle2.classList.add('hidden');
+    } else {
+        moodboardContainer.classList.add('moodboard-reduced');
+        moodboardContainer.classList.remove('moodboard-full');
+        logoContainer.classList.add('logo-large');
+        logoContainer.classList.remove('logo-small');
+        description.classList.remove('hidden');
+        filterButtons.classList.remove('hidden');
+        whiteRectangle1.classList.remove('hidden');
+        whiteRectangle2.classList.remove('hidden');
+    }
+
+    // Recentrer la grille
+    gridNavigation.centerGrid();
+}
+
+
+function closeModalFunction() {
+    // Ferme la modale
+    modal.classList.remove('active');
+    const player = document.getElementById("youtube-player");
+    if (player) player.src = "";
+
+    // Fermer également les crédits, s'ils sont actifs
+    const creditsPanel = document.querySelector('.credits-panel');
+    if (creditsPanel) {
+        creditsPanel.classList.remove('active');
+    }
+
+    // Réinitialiser l'état de la modale
+    isModalActive = false;
+}
+
+logoContainer.addEventListener('click', () => {
+    isGridExpanded = !isGridExpanded;
+    closeModal
+    toggleView(isGridExpanded);
     
+    if (isModalActive) {
+        closeModalFunction();
+        
+    }
+});
 
-    // Gestion du redimensionnement
-    window.addEventListener('resize', () => {
-        console.log("Fenêtre redimensionnée, recentrage...");
-        gridNavigation.centerGrid();
-    });
-
-
-
-
-
-
-
-
+moodboardContainer.addEventListener('click', () => {
+    if (!isGridExpanded) {
+        isGridExpanded = true;
+        toggleView(isGridExpanded);
+        
+    }
 
 
+});
+
+
+// Gestion du redimensionnement
+window.addEventListener('resize', () => {
+    console.log("Fenêtre redimensionnée, recentrage...");
+    gridNavigation.centerGrid();
+});
 
 
 
@@ -81,20 +155,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Deuxième passe : création des miniatures
                 data.forEach(video => {
-                    video.miniatures.forEach(imagePath => {
+                    video.miniatures.forEach((imagePath, index) => {
                         // Création du conteneur de la miniature
                         const miniatureDiv = document.createElement('div');
                         miniatureDiv.className = 'miniature';
                         miniatureDiv.dataset.videoUrl = video.url;
                         miniatureDiv.dataset.type = video.type;
+                        miniatureDiv.dataset.category = video.miniatureRoot;
+
+                
+                        // Vérifie si c'est un Short
+                        if (video.isShort) {
+                            miniatureDiv.classList.add('short'); // Classe CSS pour Shorts
+                        }
+
 
                         // Ajout de la classe de format
                         if (video.format === "vertical") {
                             miniatureDiv.classList.add('vertical');
+                            miniatureDiv.dataset.ratio = 'vertical';
                         } else if (video.format === "horizontal") {
                             miniatureDiv.classList.add('horizontal');
+                            miniatureDiv.dataset.ratio = 'horizontal';
                         } else if (video.format === "square") {
                             miniatureDiv.classList.add('square');
+                            miniatureDiv.dataset.ratio = 'square';
                         }
 
                         // Création et configuration de l'image
@@ -110,6 +195,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         // Gestion du clic sur la miniature
                         miniatureDiv.addEventListener('click', () => {
+                            if (!isGridExpanded) {
+                                console.log("La grille n'est pas agrandie, interaction désactivée.");
+                                return; // Interdire l'ouverture de la modale
+                            }
+                        
+                            // Si la grille est agrandie, exécuter le reste du code
                             fetch('videos.json')
                                 .then(response => response.json())
                                 .then(data => {
@@ -119,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     }
                                 });
                         });
+                        
 
                         miniatures.push(miniatureDiv);
                     });
@@ -126,17 +218,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Ajout des miniatures vides pour compléter la grille si nécessaire
                 const targetCount = 230; // Nombre total souhaité de miniatures
-                if (miniatures.length < targetCount) {
-                    fillGrid(miniatures, targetCount);
+                if (!isSmallScreen && miniatures.length < targetCount) {
+                    fillGrid(miniatures, targetCount); // Remplit la grille seulement pour les grands écrans
                 }
+
 
                 // Mélange des miniatures
                 shuffleArray(miniatures);
 
                 // Ajout des miniatures à la grille
+                let index = 0;
                 miniatures.forEach(miniature => {
                     moodboard.appendChild(miniature);
                     const img = miniature.querySelector('img');
+
+                    miniature.dataset.index = index;
+                    index++;
                     if (img) observeImage(img);
                 });
 
@@ -172,11 +269,17 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < targetCount - currentLength; i++) {
             const emptyDiv = document.createElement('div');
             if (i % 3 === 0) {
-                emptyDiv.className = 'miniature miniature-vide-horizontal';
+                // emptyDiv.className = 'miniature miniature-vide-horizontal';
+                emptyDiv.className = 'miniature horizontal';
+                emptyDiv.dataset.ratio = 'horizontal';
             } else if (i % 3 === 1) {
-                emptyDiv.className = 'miniature miniature-vide-vertical';
+                // emptyDiv.className = 'miniature miniature-vide-vertical';
+                emptyDiv.className = 'miniature vertical';
+                emptyDiv.dataset.ratio = 'vertical';
             } else {
-                emptyDiv.className = 'miniature miniature-vide-square';
+                // emptyDiv.className = 'miniature miniature-vide-square';
+                emptyDiv.className = 'miniature square';
+                emptyDiv.dataset.ratio = 'square';
             }
             miniatures.push(emptyDiv);
             emptyCount++;
@@ -209,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     image.classList.remove('loaded');
                 }
             });
-        }, { rootMargin: '200px' });
+        }, { rootMargin: '1000px' });
         observer.observe(image);
     }
 
@@ -223,14 +326,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (videoData) {
                     showCredits(videoData);
                     const player = document.getElementById("youtube-player");
-                    const videoId = videoUrl.match(/(?:youtube\.com\/(?:[^/]+\/[^/]+\/|(?:v|embed)\/|[^v]+?\?v=)|youtu\.be\/)([^&?#]+)/)[1];
-                    player.src = `https://www.youtube.com/embed/${videoId}`;
-                    modal.classList.add('active');
-                    isModalActive = true; // Modale ouverte
+    
+                    // Vérifier si l'URL est un Short ou une vidéo normale
+                    let videoId;
+                    if (videoUrl.includes('shorts/')) {
+                        // Extraction de l'ID pour les Shorts
+                        videoId = videoUrl.split('shorts/')[1].split('?')[0];
+                    } else {
+                        // Extraction de l'ID pour les vidéos standard
+                        const match = videoUrl.match(/(?:youtube\.com\/(?:[^/]+\/[^/]+\/|(?:v|embed)\/|[^v]+?\?v=)|youtu\.be\/)([^&?#]+)/);
+                        videoId = match ? match[1] : null;
+                    }
+    
+                    if (videoId) {
+                        player.src = `https://www.youtube.com/embed/${videoId}`;
+                        modal.classList.add('active');
+                        isModalActive = true; // Modale ouverte
+                    } else {
+                        console.error("Impossible d'extraire l'ID vidéo de l'URL :", videoUrl);
+                    }
                 }
+            })
+            .catch(error => {
+                console.error('Erreur lors de l’ouverture de la modale YouTube :', error);
             });
     }
+    
 
+    
 
 
 
@@ -250,6 +373,12 @@ document.addEventListener("DOMContentLoaded", function () {
         isModalActive = false;
     });
 
+    modal.addEventListener("click", (event) => {
+        // Vérifie si on a cliqué sur l'arrière-plan et pas sur le contenu
+        if (event.target === modal) {
+            closeModal.click();
+        }
+    });
 
 
 
@@ -353,6 +482,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function filterByCredit(name) {
         const allMiniatures = document.querySelectorAll('.miniature');
+        const myGrid = document.querySelector('.moodboard-grid'); // Sélectionne la grille
 
         fetch('videos.json')
             .then(response => response.json())
@@ -380,19 +510,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 });
 
-                // Recentrer la grille
+                // Ajoute la classe "filter-mode" pour indiquer qu'un filtrage est en cours
+                myGrid.classList.add('filter-mode');
+
+                // Recentrer la grille après filtrage
                 gridNavigation.centerGrid(true);
 
                 // Réactiver les interactions de zoom et déplacement
-                isModalActive = false;
             });
     }
-
-
-
-
-
-
 
 
 
@@ -403,14 +529,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const myGrid = document.querySelector('.moodboard-grid');
 
-        
+
         myGrid.classList.add('filter-mode');
 
         if (filterType == 'all') {
             myGrid.classList.remove('filter-mode');
         }
 
-        
+
 
 
         allMiniatures.forEach(miniature => {
@@ -431,22 +557,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
+            // Fermer la modale si elle est active
+            if (isModalActive) {
+                closeModal.click();
+            }
+
+            // Gestion des boutons de filtrage
             document.querySelector('.filter-btn.active')?.classList.remove('active');
             button.classList.add('active');
-
-            const filterType = button.dataset.type;
-            filterMiniatures(filterType);
-
-            // Forcer un recentrage complet lors du filtrage
-
+            filterMiniatures(button.dataset.type);
             // setTimeout(() => {
-                gridNavigation.centerGrid(true);
-                
+            gridNavigation.centerGrid(true);
+
             // }, 1500);
         });
     });
 
 
+
+    // Empêche le zoom avec Ctrl + Molette
+    window.addEventListener('wheel', (e) => {
+        if (e.ctrlKey) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    // Empêche le zoom tactile (pinch)
+    window.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 1) {
+            e.preventDefault();
+        }
+    }, { passive: false });
 
 
 
@@ -459,9 +600,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+    
 
 
 
 
 
 });
+

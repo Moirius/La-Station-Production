@@ -5,15 +5,81 @@
         "format": "horizontal",
         "type": "live",
         "miniatureRoot": "miniatures/Site/pepper_beef/Pepper_Beef_Live_au_4bis",
-        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_5.webp", "1_6.webp", "1_7.webp"]
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_5.webp", "1_6.webp", "1_7.webp"],
+        "credits": {
+            "team": [
+                
+                {
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Pepper Beef"
+                       
+                    ]
+                },
+                {
+                    "role": "Prise de Vues",
+                    "names": [
+                        
+                         "Benjamin Montecot",
+                        "Maud Masse" ]
+
+                },
+                {
+                    "role": "Post-Production",
+                    "names": [
+        
+                        "Benjamin Montecot"
+                       
+                    ]
+                }
+            ]
+        }
     },
+
     {
         "title": "Jeanne Bonjour - À mes amours (flashmob Release Party Rennes)",
         "url": "https://youtu.be/msXiVbt9PUs?si=gYuw1sjLPBmIkHUQ",
         "format": "horizontal",
         "type": "live",
         "miniatureRoot": "miniatures/Site/jeanne_bonjour/Jeanne_Bonjour_A_mes_amours",
-        "miniatures": ["1_1.webp", "1_3.webp", "1_4.webp", "1_5.webp", "1_7.webp", "1_8.webp", "1_9.webp", "1_11.webp", "1_10.webp"]
+        "miniatures": ["1_1.webp", "1_3.webp", "1_4.webp", "1_5.webp", "1_7.webp", "1_8.webp", "1_9.webp", "1_11.webp", "1_10.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Jeanne Bonjour"
+                       
+                    ]
+                },
+                {
+
+
+
+                    
+                    "role": "Prise de Vues",
+                    "names": [
+                        
+                         "Benjamin Montecot",
+                        "Alexis Chauvel",
+                        "Marius Biotteau",
+                        "Alan Roussel" ]
+
+                },
+                {
+                    "role": "Post-Production",
+                    "names": [
+        
+                        "Marius Biotteau"
+                       
+                    ]
+                }
+            ]
+        }
+    
+        
     },
     {
         "title": "Big Pony Highway - Keep On Doin' It",
@@ -23,19 +89,20 @@
         "miniatureRoot": "miniatures/Site/big_pony/Big_Pony_Highway_Keep_On_Doin_It",
         "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp"],
         "credits": {
-            "production": {
-                "label": "Composé et interprété par",
-                "value": "Big Pony Highway"
-            },
             "team": [
                 {
-                    "role": "Prise son et mixage",
-                    "names": ["Ghislain Le Bloa"]
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Big Pony Highway"
+                       
+                    ]
                 },
                 {
-                    "role": "Réalisé par",
+                    "role": "Réalisation",
                     "names": ["Benjamin Montecot", "Marius Biotteau", "Hector Paris"]
                 }
+
             ]
         }
     
@@ -50,19 +117,27 @@
         "credits": {
             "team": [
                 {
-                    "role": "Mise en scène",
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Bendiaz"
+                       
+                    ]
+                },
+                {
+                    "role": "Réalisation",
                     "names": ["Marius Biotteau"]
                 },
                 {
-                    "role": "Image",
+                    "role": "Chef Opérateur",
                     "names": ["Benjamin Montecot"]
                 },
                 {
-                    "role": "Chef Opérateur",
-                    "names": ["Alan Roussel"]
+                    "role": "Chef Électro",
+                    "names": ["Alan Roussel", "Benjamin Montecot"]
                 },
                 {
-                    "role": "Lumière",
+                    "role": "Équipe Électros",
                     "names": [
                         "Robin Cheruel",
                         "Marin Nupied",
@@ -72,11 +147,11 @@
                     ]
                 },
                 {
-                    "role": "Image - Opérateur Stabilisateur",
+                    "role": "Opérateur Stabilisateur",
                     "names": ["Lucas Le Gall"]
                 },
                 {
-                    "role": "Image - Opérateur Caméra",
+                    "role": "Prise de Vues",
                     "names": ["Roxanne Delcampe"]
                 }
             ]
@@ -88,7 +163,38 @@
         "format": "horizontal",
         "type": "live session",
         "miniatureRoot": "miniatures/Site/lezarus/La_machine_Session_Live",
-        "miniatures": ["1_2.webp", "1_3.webp", "1_1.webp"]
+        "miniatures": ["1_2.webp", "1_3.webp", "1_1.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Lezarus"
+                       
+                    ]
+                },
+                {
+                    "role": "Prise de Vues",
+                    "names": [
+                        
+                         "Pierre Henry Caroff Rolland",
+                        "Lucas Le Gall",
+                        "Marius Biotteau",
+                        "Alan Roussel" ]
+
+                },
+                {
+                    "role": "Post-Production",
+                    "names": [
+        
+                        "Marius Biotteau"
+                       
+                    ]
+                }
+            ]
+        }
+    
     },
     {
         "title": "DAVID PISTOL Perdre pour mieux gagner LIVE STATION",
@@ -100,19 +206,27 @@
         "credits": {
             "team": [
                 {
-                    "role": "Mise en scène",
+                    "role": "Artiste",
+                    "names": [
+        
+                        "David Pistol"
+                       
+                    ]
+                },
+                {
+                    "role": "Réalisation",
                     "names": ["Marius Biotteau"]
                 },
                 {
-                    "role": "Image",
+                    "role": "Chef Opérateur",
                     "names": ["Benjamin Montecot"]
                 },
                 {
-                    "role": "Chef Opérateur",
+                    "role": "Chef Électro",
                     "names": ["Alan Roussel"]
                 },
                 {
-                    "role": "Lumière",
+                    "role": "Équipe Électros",
                     "names": [
                         "Robin Cheruel",
                         "Marin Nupied",
@@ -122,11 +236,11 @@
                     ]
                 },
                 {
-                    "role": "Image - Opérateur Stabilisateur",
+                    "role": "Opérateur Stabilisateur",
                     "names": ["Alexis Chauvel"]
                 },
                 {
-                    "role": "Image - Opérateur Caméra",
+                    "role": "Prise de Vues",
                     "names": ["Roxanne Delcampe"]
                 }
             ]
@@ -140,11 +254,15 @@
         "miniatureRoot": "miniatures/Site/pepper_beef/Pepper_Beef_Frog",
         "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp", "1_6.webp", "1_7.webp", "1_8.webp"],
         "credits": {
-            "production": {
-                "label": "Mixage et Mastering",
-                "value": "L'Atelier"
-            },
             "team": [
+                {
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Pepper Beef"
+                       
+                    ]
+                },
                 {
                     "role": "Réalisation",
                     "names": ["Benjamin Montecot"]
@@ -154,15 +272,20 @@
                     "names": ["Marius Biotteau"]
                 },
                 {
+                    "role": "Actrice",
+                    "names": ["Jeanne Trinité"]
+                },
+
+                {
                     "role": "Chef Opérateur",
                     "names": ["Alan Roussel"]
                 },
                 {
-                    "role": "Prise de vue",
+                    "role": "Prise de Vues",
                     "names": ["Alexis Chauvel", "Roméo Des Cognets"]
                 },
                 {
-                    "role": "Électricien",
+                    "role": "Équipe Électros",
                     "names": [
                         "Pierre Henry Caroff Rolland",
                         "Maud Masse",
@@ -173,8 +296,8 @@
                 {
                     "role": "Régie",
                     "names": [
-                        "Theo Samson",
-                        "Patricia Gasnier",
+                        "Théo Samson",
+                        "Patricia Borde",
                         "Manuella Montecot",
                         "Lili Gasnier"
                     ]
@@ -201,7 +324,15 @@
         "credits": {
             "team": [
                 {
-                    "role": "Tournage",
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Big Pony Highway"
+                       
+                    ]
+                },
+                {
+                    "role": "Réalisation",
                     "names": [
                         
                          "Benjamin Montecot",
@@ -211,7 +342,7 @@
 
                 },
                 {
-                    "role": "Post-production",
+                    "role": "Post-Production",
                     "names": [
         
                         "Benjamin Montecot"
@@ -231,8 +362,17 @@
         "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp"],
         "credits": {
             "team": [
+                
                 {
-                    "role": "Tournage",
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Bendiaz"
+                       
+                    ]
+                },
+                {
+                    "role": "Prise de Vues",
                     "names": [
                         
                          "Benjamin Montecot",
@@ -240,7 +380,7 @@
 
                 },
                 {
-                    "role": "Post-production",
+                    "role": "Post-Production",
                     "names": [
         
                         "Benjamin Montecot"
@@ -261,7 +401,15 @@
         "credits": {
             "team": [
                 {
-                    "role": "Tournage",
+                    "role": "Association",
+                    "names": [
+        
+                        "Club Des Jeunes De Moncontour"
+                       
+                    ]
+                },
+                {
+                    "role": "Prise de Vues",
                     "names": [
                         
                          "Benjamin Montecot"]
@@ -269,7 +417,7 @@
 
                 },
                 {
-                    "role": "Post-production",
+                    "role": "Post-Production",
                     "names": [
         
                         "Benjamin Montecot"]
@@ -289,7 +437,15 @@
         "credits": {
             "team": [
                 {
-                    "role": "Tournage",
+                    "role": "Association",
+                    "names": [
+        
+                        "Club Des Jeunes De Moncontour"
+                       
+                    ]
+                },
+                {
+                    "role": "Prise de Vues",
                     "names": [
                         
                          "Benjamin Montecot"]
@@ -297,7 +453,7 @@
 
                 },
                 {
-                    "role": "Post-production",
+                    "role": "Post-Production",
                     "names": [
         
                         "Benjamin Montecot"]
@@ -316,7 +472,15 @@
         "credits": {
             "team": [
                 {
-                    "role": "Tournage",
+                    "role": "Association",
+                    "names": [
+        
+                        "Club Des Jeunes De Moncontour"
+                       
+                    ]
+                },
+                {
+                    "role": "Prise de Vues",
                     "names": [
                         
                          "Benjamin Montecot"]
@@ -324,7 +488,7 @@
 
                 },
                 {
-                    "role": "Post-production",
+                    "role": "Post-Production",
                     "names": [
         
                         "Benjamin Montecot"]
@@ -344,7 +508,15 @@
         "credits": {
             "team": [
                 {
-                    "role": "Tournage",
+                    "role": "Association",
+                    "names": [
+        
+                        "Club Des Jeunes De Moncontour"
+                       
+                    ]
+                },
+                {
+                    "role": "Prise de Vues",
                     "names": [
                         
                          "Benjamin Montecot"]
@@ -372,7 +544,15 @@
 
           "team": [
             {
-              "role": "RÉALISÉ PAR",
+                "role": "Artiste",
+                "names": [
+    
+                    "Pepper Beef"
+                   
+                ]
+            },
+            {
+              "role": "Réalisation",
               "names": ["Benjamin Montecot"]
           },
               {
@@ -384,45 +564,25 @@
                   "names": ["Lucas Le Gall"]
               },
               {
-                  "role": "Assistant Lumière",
-                  "names": ["Alan Roussel"]
+                  "role": "Équipe Électros",
+                  "names": ["Alan Roussel", "Camille Valeon"]
               },
               {
-                  "role": "Assistante Lumière",
-                  "names": ["Camille Valeon"]
+                  "role": "Équipe Décoration",
+                  "names": ["Hector Paris", "Romane Flamen"]
               },
               {
-                  "role": "Chef Décorateur",
-                  "names": ["Hector Paris"]
-              },
-              {
-                  "role": "Assistante Décoratrice",
-                  "names": ["Romane Flamen"]
-              },
-              {
-                  "role": "Maquilleuse",
+                  "role": "Maquillage",
                   "names": ["Maeva Rochefort"]
-              }
-          ],
-          "additional": [
+              },
+
               {
-                  "role": "Cheffe Régisseuse",
-                  "names": ["Suzanne L'Hostis"]
+                  "role": "Régie",
+                  "names": ["Suzanne L'Hostis","Hugo Gouin-Cossais", "Théo Samson", "Arthur Le Deant",
+                "Maud Masse", "Laïs Faure", "Nina Carrez","Colin Grolleau"]
               },
               {
-                  "role": "Régisseur",
-                  "names": ["Hugo Gouin-Cossais", "Théo Samson", "Arthur Le Deant"]
-              },
-              {
-                  "role": "Régisseuse",
-                  "names": ["Maud Masse", "Laïs Faure", "Nina Carrez"]
-              },
-              {
-                  "role": "Régisseur",
-                  "names": ["Colin Grolleau"]
-              },
-              {
-                  "role": "Montage/Étalonnage",
+                  "role": "Post-production",
                   "names": ["Benjamin Montecot"]
               }
           ]
@@ -438,7 +598,15 @@
         "credits": {
             "team": [
                 {
-                    "role": "Tournage",
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Bendiaz"
+                       
+                    ]
+                },
+                {
+                    "role": "Prise de Vues",
                     "names": [
                         
                          "Benjamin Montecot",
@@ -467,94 +635,40 @@
         "credits": {
             "team": [
                 {
-                    "role": "Paroles",
-                    "names": ["Maïa Bloom"]
-                },
-                {
-                    "role": "Composition",
-                    "names": ["Oscar Collet", "Maïa Bloom"]
-                },
-                {
-                    "role": "Saxophone",
-                    "names": ["Youn Lebreton"]
-                },
-                {
-                    "role": "Basse",
-                    "names": ["Elie Lancieaux"]
-                },
-                {
-                    "role": "Guitare",
-                    "names": ["Oscar Collet", "Baptiste Wagner"]
-                },
-                {
-                    "role": "Choeurs",
-                    "names": ["Maïa Bloom", "Océane Mpundu"]
-                },
-                {
-                    "role": "Mixage",
-                    "names": ["Oscar Collet"]
-                },
-                {
-                    "role": "Mastering",
-                    "names": ["L’Atelier"]
-                },
-                {
-                    "role": "Clip écrit et imaginé par",
-                    "names": ["Maïa Bloom"]
-                },
-                {
-                    "role": "Réalisé par",
-                    "names": ["LaStation.Prod"]
-                },
-                {
-                    "role": "Acteurs",
+                    "role": "Artiste",
                     "names": [
-                        "Maïa Bloom",
-                        "Maité Feuardent",
-                        "Bernard Herbert",
-                        "Jacqueline Gasnier",
-                        "Isabelle Borde",
-                        "Sebastien Borde",
-                        "Jeanne Magnon",
-                        "Sandro Gasnier",
-                        "Thaïs et Luna Feuardent",
-                        "Lili Gasnier",
-                        "Jacqueline et Rolland Gombert",
-                        "Virgile Baron",
-                        "Noah Lefresne",
-                        "Juliette Le Boucher",
-                        "Patricia Borde Gasnier",
-                        "Melvin Guyony",
-                        "Maden Testard",
-                        "Kyllian Deniel"
+        
+                        "Maïa Bloom"
+                       
                     ]
                 },
                 {
-                    "role": "Produit par",
-                    "names": ["Maïa Bloom"]
+                    "role": "Réalisation",
+                    "names": ["Benjamin Montecot", "Maïa Bloom"]
                 },
                 {
-                    "role": "Image",
+                    "role": "Prise de Vues",
+                    "names": [
+                        "Benjamin Montecot"
+                    ]
+                },
+                {
+                    "role": "Équipe Électros",
                     "names": [
                         "Alan Roussel",
-                        "Benjamin Montecot",
                         "Pierre Henry Caroff Rolland"
                     ]
                 },
                 {
-                    "role": "Costumes, maquillage, décor et tout le tintouin",
+                    "role": "Équipe Décoration",
                     "names": ["Maïa Bloom", "Patricia Borde"]
                 },
                 {
-                    "role": "Régisseuses",
+                    "role": "Régie",
                     "names": ["Patricia Borde", "Lili Gasnier"]
                 },
                 {
-                    "role": "Montage",
-                    "names": ["Benjamin Montecot"]
-                },
-                {
-                    "role": "Étalonnage",
+                    "role": "Post-production",
                     "names": ["Benjamin Montecot"]
                 }
             ]
@@ -571,19 +685,27 @@
         "credits": {
             "team": [
                 {
-                    "role": "Mise en scène",
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Jeanne Bonjour"
+                       
+                    ]
+                },
+                {
+                    "role": "Réalisation",
                     "names": ["Marius Biotteau"]
                 },
                 {
-                    "role": "Image",
+                    "role": "Chef Opérateur",
                     "names": ["Benjamin Montecot"]
                 },
                 {
-                    "role": "Chef Opérateur",
+                    "role": "Chef Électro",
                     "names": ["Alan Roussel"]
                 },
                 {
-                    "role": "Lumière",
+                    "role": "Équipe Électros",
                     "names": [
                         "Robin Cheruel",
                         "Marin Nupied",
@@ -593,17 +715,16 @@
                     ]
                 },
                 {
-                    "role": "Image - Opérateur Stabilisateur",
+                    "role": "Opérateur Stabilisateur",
                     "names": ["Lucas Le Gall"]
                 },
                 {
-                    "role": "Image - Opérateur Caméra",
+                    "role": "Prise de Vues",
                     "names": ["Roxanne Delcampe"]
                 }
             ]
         }
     },
- 
     
     {
         "title": "Pepper Beef - Devil In Me",
@@ -615,7 +736,15 @@
         "credits": {
             "team": [
                 {
-                    "role": "Tournage",
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Pepper Beef"
+                       
+                    ]
+                },
+                {
+                    "role": "Réalisation",
                     "names": [
                         "Marius Biotteau",
                         "Benjamin Montecot",
@@ -624,26 +753,14 @@
                     ]
                 },
                 {
-                    "role": "Post-production",
+                    "role": "Post-Production",
                     "names": [
                         "Marius Biotteau",
                         "Benjamin Montecot",
                         "Alan Roussel"
                     ]
                 }
-            ],
-            "additional": [
-                {
-                    "role": "Remerciements",
-                    "names": [
-                        "Juliette Le Boucher",
-                        "Gabin Le Breton",
-                        "Sam Giordano",
-                        "Golf Bluegreen",
-                        "Château de La Hunaudaye",
-                        "Gare de Loudéac"
-                    ]
-                }
+            
             ]
         }
     },
@@ -657,7 +774,15 @@
         "credits": {
             "team": [
                 {
-                    "role": "Tournage",
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Pepper Beef"
+                       
+                    ]
+                },
+                {
+                    "role": "Réalisation",
                     "names": [
                         "Marius Biotteau",
                         "Benjamin Montecot",
@@ -666,24 +791,11 @@
                     ]
                 },
                 {
-                    "role": "Post-production",
+                    "role": "Post-Production",
                     "names": [
                         "Marius Biotteau",
                         "Benjamin Montecot",
                         "Alan Roussel"
-                    ]
-                }
-            ],
-            "additional": [
-                {
-                    "role": "Remerciements",
-                    "names": [
-                        "Juliette Le Boucher",
-                        "Gabin Le Breton",
-                        "Sam Giordano",
-                        "Golf Bluegreen",
-                        "Château de La Hunaudaye",
-                        "Gare de Loudéac"
                     ]
                 }
             ]
@@ -698,33 +810,33 @@
         "miniatureRoot": "miniatures/Site/david_pistol/Dans_Le_Fond_De_Mes_Yeux",
         "miniatures": ["1_10.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp", "1_6.webp", "1_7.webp", "1_8.webp", "1_9.webp", "1_11.webp"],
         "credits": {
-            "production": {
-      "label": "Réalisé par",
-      "value": "La Station Production"
-    },
     "team": [
+        {
+            "role": "Artiste",
+            "names": [
+
+                "David Pistol"
+               
+            ]
+        },
       {
-        "role": "Réalisateur",
+        "role": "Réalisation",
         "names": ["Marius Biotteau"]
       },
       {
-        "role": "Cadreur",
-        "names": ["Benjamin Montecot"]
+        "role": "Prise de Vues",
+        "names": ["Benjamin Montecot","Maud Masse"]
       },
       {
-        "role": "Chef opé",
+        "role": "Chef Opérateur",
         "names": ["Alan Roussel"]
       },
       {
         "role": "Montage",
-        "names": ["Marius Biotteau", "Benjamin Montecot"]
+        "names": ["Benjamin Montecot"]
       },
       {
-        "role": "Assistante caméra",
-        "names": ["Maud Masse"]
-      },
-      {
-        "role": "Electro",
+        "role": "Équipe Électros",
         "names": [
           "Pierre Henry Caroff Rolland",
           "Marin Nupied",
@@ -732,9 +844,7 @@
           "Jules Bernard",
           "Mathilde Moutardier"
         ]
-      }
-    ],
-    "additional": [
+      },
       {
         "role": "Typographie",
         "names": ["Romain Petton-Martin"]
@@ -742,32 +852,67 @@
       {
         "role": "Cover",
         "names": ["Brieuc Girodon"]
-      },
-      {
-        "role": "Mix / Master",
-        "names": ["Elliot Le Borgne"]
-      },
-      {
-        "role": "Prod",
-        "names": ["Dj sc4m"]
       }
     ]
   }
 },
 
+
+
+
+
+{
+    "title": "photos live station @SKARR.RAW",
+    "url": "URL de la vidéo",
+    "format": "square",
+    "type": "live session",
+    "miniatureRoot": "miniatures/Site/photos_live_station_SKARR",
+    "miniatures": [
+        "helios_flowers/1_1.webp", "helios_flowers/1_2.webp", "helios_flowers/1_3.webp", 
+        "maia_bloom/1_1.webp","maia_bloom/1_2.webp","maia_bloom/1_3.webp","maia_bloom/1_4.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Photographe",
+                    "names": [
+                        "SKARR.RAW"
+                    ]
+           
+                }
+            ]
+        }
+  
+        
+        
+
+},
+
     {
-        "title": "photos live station",
-        "url": "URL de la vidéo",
+        "title": "photos live station @barburies",
+        "url": "",
         "format": "square",
         "type": "live session",
-        "miniatureRoot": "miniatures/Site/photos_live_station",
+        "miniatureRoot": "miniatures/Site/photos_live_station_Barburies",
         "miniatures": [
             "bendiaz/1_5.webp", "bendiaz/1_6.webp", "bendiaz/1_7.webp", "bendiaz/1_8.webp", "bendiaz/1_9.webp", "bendiaz/1_10.webp",
             "bendiaz/1_11.webp", "bendiaz/1_12.webp", "bendiaz/1_13.webp", "bendiaz/1_14.webp",
             "jeanne_bonjour/1_5.webp", "jeanne_bonjour/1_6.webp", "jeanne_bonjour/1_7.webp",
-            "arpseze/1_1.webp", "arpseze/1_2.webp", "arpseze/1_3.webp", "arpseze/1_4.webp", "arpseze/1_5.webp",
-            "helios_flowers/1_1.webp", "helios_flowers/1_2.webp", "helios_flowers/1_3.webp"]
+            "arpseze/1_1.webp", "arpseze/1_2.webp", "arpseze/1_3.webp", "arpseze/1_4.webp", "arpseze/1_5.webp"],
+            "credits": {
+                "team": [
+                    {
+                        "role": "Photographe",
+                        "names": [
+                            "Nathan Robin"
+                        ]
+               
+                    }
+                ]
+            }
+ 
     },
+
+
 
 
     {
@@ -780,7 +925,15 @@
         "credits": {
             "team": [
                 {
-                    "role": "Vidéo",
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Zosterae"
+                       
+                    ]
+                },
+                {
+                    "role": "Prise de Vues",
                     "names": [
                         "Benjamin Montecot",
                         "Marius Biotteau",
@@ -794,9 +947,7 @@
                         "Jean Richard",
                         "Arthur Broyart"
                     ]
-                }
-            ],
-            "additional": [
+                },
                 {
                     "role": "Bassiste",
                     "names": ["Camille Dias"]
@@ -832,7 +983,15 @@
         "credits": {
             "team": [
                 {
-                    "role": "Vidéo",
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Zosterae"
+                       
+                    ]
+                },
+                {
+                    "role": "Prise de Vues",
                     "names": [
                         "Benjamin Montecot",
                         "Marius Biotteau",
@@ -846,9 +1005,7 @@
                         "Jean Richard",
                         "Arthur Broyart"
                     ]
-                }
-            ],
-            "additional": [
+                },
                 {
                     "role": "Bassiste",
                     "names": ["Camille Dias"]
@@ -879,24 +1036,33 @@
         "url": "https://www.youtube.com/shorts/PjZM_-LkEdQ",
         "format": "vertical",
         "type": "live session",
+        "isShort": true,
         "miniatureRoot": "miniatures/Site/Helios_Flowers/HELIOS_FLOWER_Anastasia_Counts_Invisible_Diamonds_LIVE_STATION",
         "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp", "1_5.webp"],
         "credits": {
             "team": [
                 {
-                    "role": "Mise en scène",
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Helios Flower"
+                       
+                    ]
+                },
+                {
+                    "role": "Réalisation",
                     "names": ["Marius Biotteau"]
                 },
                 {
-                    "role": "Image",
+                    "role": "Chef Opérateur",
                     "names": ["Benjamin Montecot"]
                 },
                 {
-                    "role": "Chef Opérateur",
+                    "role": "Chef Électro",
                     "names": ["Alan Roussel"]
                 },
                 {
-                    "role": "Lumière",
+                    "role": "Équipe Électros",
                     "names": [
                         "Robin Cheruel",
                         "Marin Nupied",
@@ -906,12 +1072,12 @@
                     ]
                 },
                 {
-                    "role": "Image - Opérateur Stabilisateur",
+                    "role": "Opérateur Stabilisateur",
                     "names": ["Alexis Chauvel"]
                 },
                 {
-                    "role": "Image - Opérateur Caméra",
-                    "names": ["Roxanne Delcampe"]
+                    "role": "Prise de Vues",
+                    "names": ["Roxanne Delcampe", "Benjamin Montecot"]
                 }
             ]
         }
@@ -927,19 +1093,27 @@
         "credits": {
             "team": [
                 {
-                    "role": "Mise en scène",
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Maïa Bloom"
+                       
+                    ]
+                },
+                {
+                    "role": "Réalisation",
                     "names": ["Marius Biotteau"]
                 },
                 {
-                    "role": "Image",
+                    "role": "Chef Opérateur",
                     "names": ["Benjamin Montecot"]
                 },
                 {
-                    "role": "Chef Opérateur",
+                    "role": "Chef Électro",
                     "names": ["Alan Roussel"]
                 },
                 {
-                    "role": "Lumière",
+                    "role": "Équipe Électros",
                     "names": [
                         "Robin Cheruel",
                         "Marin Nupied",
@@ -949,19 +1123,102 @@
                     ]
                 },
                 {
-                    "role": "Image - Opérateur Stabilisateur",
+                    "role": "Opérateur Stabilisateur",
                     "names": ["Alexis Chauvel"]
                 },
                 {
-                    "role": "Image - Opérateur Caméra",
-                    "names": ["Roxanne Delcampe"]
+                    "role": "Prise de Vues",
+                    "names": ["Roxanne Delcampe", "Benjamin Montecot"]
                 }
             ]
         }
+    },
+    {
+        "title": "PURE - Colorado (Official Video)",
+        "url": "https://www.youtube.com/watch?v=iUajn2CNi0k",
+        "format": "horizontal",
+        "type": "clip",
+        "miniatureRoot": "miniatures/Site/Pure/PURE_Colorado_(Official_Video)",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp", "1_4.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Artiste",
+                    "names": [
+        
+                        "Pure"
+                       
+                    ]
+                },
+                {
+                    "role": "Réalisation",
+                    "names": ["Benjamin Montecot"]
+                },
+                {
+                    "role": "Assistant Réalisateur",
+                    "names": ["Marius Biotteau"]
+                },
+                {
+                    "role": "Chef Opérateur",
+                    "names": ["Alan Roussel"]
+                },
+                {
+                    "role": "Prise de Vues",
+                    "names": ["Yoann Riotto"]
+                },
+                {
+                    "role": "Équipe Électros",
+                    "names": [
+                        "Pierre Henry Caroff Rolland"
+                    ]
+                },
+                {
+                    "role": "Maquillage",
+                    "names": ["Karline Stephan"]
+                }
+            ]
+        }
+    
+    
+    },
+
+
+    {
+        "title": "25 YEARS OF RAVE",
+        "url": "https://www.youtube.com/shorts/E5svZgs6T5M",
+        "format": "vertical",
+        "type": "After Movie",
+        "isShort": true,
+        "miniatureRoot": "miniatures/Site/25_YEARS_OF_RAVE",
+        "miniatures": ["1_1.webp", "1_2.webp", "1_3.webp"],
+        "credits": {
+            "team": [
+                {
+                    "role": "Association",
+                    "names": [
+        
+                        "T.lesco.P"
+                       
+                    ]
+                },
+                {
+                    "role": "Prise de Vues",
+                    "names": [
+                        
+                         "Marius Biotteau", "Alan Roussel"]
+                        
+
+                },
+                {
+                    "role": "Post-Production",
+                    "names": [
+        
+                        "Benjamin Montecot"]
+                }
+            ]
+        }
+    
     }
-
-
-
     
     
 

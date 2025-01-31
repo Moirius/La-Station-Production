@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <meta charset="UTF-8">
     
     <title>Portfolio Vidéo</title>
@@ -10,28 +11,61 @@
 </head>
 <body>
     <!-- Logo principal -->
-    <div id="logo-container">
+    <!-- <div id="logo-container">
         <img src="./miniatures/elements/LOGO_TRANSPARENT_BLANC.png" id="logo-image" class="logo-noir" alt="Logo du site">
+    </div> -->
+
+
+       <!-- Logo principal -->
+       <div id="logo-container" class="logo-large">
+        <img src="./miniatures/elements/LOGO_TRANSPARENT_BLANC.png" id="logo-image" alt="Logo du site">
     </div>
+
+
+            <!-- Texte descriptif -->
+<!-- Texte descriptif -->
+<div id="description">
+    <h1 class="responsive-title">
+        CRÉATION DE VIDÉOS<br>
+
+
+      </h1>
+      <p>07 80 83 37 44<br>
+       <a href="https://www.instagram.com/lastation.prod?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="unstyled-link">@Lastation.prod</a><br>contact@lastation-prod.com
+    </p>
+</div>
+
+<div id="white-rectangle"></div>
+<div id="white-rectangle2"></div>
+
+
+    
+
+            
 
     <!-- Section des boutons de filtrage -->
     <div id="filter-buttons">
-        <button class="filter-btn" data-type="all">All</button>
-        <button class="filter-btn" data-type="clip">Clips</button>
-        <button class="filter-btn" data-type="live">Lives</button>
-        <button class="filter-btn" data-type="live session">Live Sessions</button>
-        <button class="filter-btn" data-type="After Movie">After Movies</button>
+        <button class="filter-btn ratio-16-9" data-type="clip">Clips</button>
+        <button class="filter-btn ratio-16-9" data-type="live">Lives</button>
+        <button class="filter-btn ratio-1-1" data-type="live session">Live<br>Sessions</button>
+        <button class="filter-btn ratio-19-9" data-type="After Movie">After<br>Movies</button>
     </div>
 
-    <!-- Grille des miniatures (injectée par JavaScript) -->
-    <div class="moodboard-container">
+    
+    <!-- Conteneur principal pour la grille -->
+    <div class="moodboard-container moodboard-reduced">
         <div class="moodboard-grid"></div>
     </div>
+
+    <!-- <div id="team-button">
+        <button onclick="window.location.href='team.html'">Notre Équipe</button>
+    </div>
+     -->
 
     <!-- Fenêtre modale pour afficher les vidéos YouTube -->
     <div id="youtube-modal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close close-modal">&times;</span> <!-- Bouton pour fermer la modale -->
             <iframe 
                 id="youtube-player" 
                 frameborder="0" 
